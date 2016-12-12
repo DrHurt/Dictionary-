@@ -1,7 +1,10 @@
 # Dictionary++
 
 Forked from: Josh Parnham's project: https://github.com/josh-/DictionaryPlusPlus
-Which was inspired by: [Dictionary+](http://www.best10apps.com/apps/dictionary,498743181/) (pulled from the store for violating the [`UIReferenceLibraryViewController` terms of use](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIReferenceLibraryViewControllerClassRef/)), Dictionary++ is a simple interface to iOS's system dictionary.
+
+Which was inspired by: [Dictionary+](http://www.best10apps.com/apps/dictionary,498743181/) (pulled from the store for violating the [`UIReferenceLibraryViewController` terms of use](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIReferenceLibraryViewControllerClassRef/)), 
+
+Dictionary++ is a simple interface to iOS's system dictionary.
 
 Updated for better compatibility with iOS 10 and use with multiple languages.
 
