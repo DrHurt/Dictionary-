@@ -127,18 +127,6 @@
     NSString *word = self.searchBar.text;
     NSRange range = NSMakeRange(0, word.length);
     
-    /*NSArray *guesses = [self.textChecker guessesForWordRange:range inString:word language:@"en_US"];
-    
-    for (int i = 0; i < [guesses count]; i++) {
-        if ([self.ignoredWords count] > 0) {
-            if (![self.ignoredWords containsObject:guesses[i]]) {
-                [self.words addObject:guesses[i]];
-            }
-        }
-        else {
-            [self.words addObject:guesses[i]];
-        }
-    }*/
     UITextInputMode *inputMode = [self.searchBar textInputMode];
     NSString *lang = inputMode.primaryLanguage;
     
@@ -152,6 +140,19 @@
         }
         else {
             [self.words addObject:completions[i]];
+        }
+    }
+    
+    NSArray *guesses = [self.textChecker guessesForWordRange:range inString:word language:lang];
+    
+    for (int i = 0; i < [guesses count]; i++) {
+        if ([self.ignoredWords count] > 0) {
+            if (![self.ignoredWords containsObject:guesses[i]]) {
+                [self.words addObject:guesses[i]];
+            }
+        }
+        else {
+            [self.words addObject:guesses[i]];
         }
     }
     
